@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <!-- Force NuGet to use SDK tasks instead of VS-installed ones (avoids Microsoft.Build.Utilities.v4.0) -->
+    <MSBuildExtensionsPathFallbackPathsOverride></MSBuildExtensionsPathFallbackPathsOverride>
+    <NuGetTasksAssembly>$(MSBuildSDKsPath)\..\NuGet.Build.Tasks.dll</NuGetTasksAssembly>
+    <!-- Keep MSBuild task lookup on the .NET SDK root, not Visual Studio -->
+    <MSBuildExtensionsPath>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath>
+    <MSBuildExtensionsPath32>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath32>
+    <MSBuildExtensionsPathFallbackPaths></MSBuildExtensionsPathFallbackPaths>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoMarket.Application\CryptoMarket.Application.csproj" />
+    <ProjectReference Include="..\CryptoMarket.Infrastructure\CryptoMarket.Infrastructure.csproj" />
+    <ProjectReference Include="..\CryptoMarket.Web\CryptoMarket.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Force NuGet to use SDK tasks instead of VS-installed ones (avoids Microsoft.Build.Utilities.v4.0) -->
+    <MSBuildExtensionsPathFallbackPathsOverride></MSBuildExtensionsPathFallbackPathsOverride>
+    <NuGetTasksAssembly>$(MSBuildSDKsPath)\..\NuGet.Build.Tasks.dll</NuGetTasksAssembly>
+    <!-- Keep MSBuild task lookup on the .NET SDK root, not Visual Studio -->
+    <MSBuildExtensionsPath>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath>
+    <MSBuildExtensionsPath32>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath32>
+    <MSBuildExtensionsPathFallbackPaths></MSBuildExtensionsPathFallbackPaths>
+  </PropertyGroup>
+
+</Project>

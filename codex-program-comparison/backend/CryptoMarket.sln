@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Web", "src/CryptoMarket.Web/CryptoMarket.Web.csproj", "{3C05A5E7-B8C9-48AA-8E7B-E8F06F211832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Application", "src/CryptoMarket.Application/CryptoMarket.Application.csproj", "{371A91AA-314E-4A4E-B22A-C1928233A0A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Infrastructure", "src/CryptoMarket.Infrastructure/CryptoMarket.Infrastructure.csproj", "{C275B585-1E79-4822-B525-F3C7C2B81ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Domain", "src/CryptoMarket.Domain/CryptoMarket.Domain.csproj", "{E695CEF4-DB2D-417A-85E3-EAAFCCAA633C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C05A5E7-B8C9-48AA-8E7B-E8F06F211832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C05A5E7-B8C9-48AA-8E7B-E8F06F211832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C05A5E7-B8C9-48AA-8E7B-E8F06F211832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C05A5E7-B8C9-48AA-8E7B-E8F06F211832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371A91AA-314E-4A4E-B22A-C1928233A0A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371A91AA-314E-4A4E-B22A-C1928233A0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371A91AA-314E-4A4E-B22A-C1928233A0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371A91AA-314E-4A4E-B22A-C1928233A0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C275B585-1E79-4822-B525-F3C7C2B81ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C275B585-1E79-4822-B525-F3C7C2B81ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C275B585-1E79-4822-B525-F3C7C2B81ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C275B585-1E79-4822-B525-F3C7C2B81ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E695CEF4-DB2D-417A-85E3-EAAFCCAA633C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E695CEF4-DB2D-417A-85E3-EAAFCCAA633C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E695CEF4-DB2D-417A-85E3-EAAFCCAA633C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E695CEF4-DB2D-417A-85E3-EAAFCCAA633C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

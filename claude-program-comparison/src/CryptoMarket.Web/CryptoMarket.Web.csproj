@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-CryptoMarket-12345678</UserSecretsId>
+    <!-- Force NuGet to use SDK tasks instead of VS-installed ones (avoids Microsoft.Build.Utilities.v4.0) -->
+    <MSBuildExtensionsPathFallbackPathsOverride></MSBuildExtensionsPathFallbackPathsOverride>
+    <NuGetTasksAssembly>$(MSBuildSDKsPath)\..\NuGet.Build.Tasks.dll</NuGetTasksAssembly>
+    <!-- Keep MSBuild task lookup on the .NET SDK root, not Visual Studio -->
+    <MSBuildExtensionsPath>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath>
+    <MSBuildExtensionsPath32>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath32>
+    <MSBuildExtensionsPathFallbackPaths></MSBuildExtensionsPathFallbackPaths>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoMarket.Application\CryptoMarket.Application.csproj" />
+    <ProjectReference Include="..\CryptoMarket.Infrastructure\CryptoMarket.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

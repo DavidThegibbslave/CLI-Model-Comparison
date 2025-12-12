@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Force NuGet to use SDK tasks instead of VS-installed ones (avoids Microsoft.Build.Utilities.v4.0) -->
+    <MSBuildExtensionsPathFallbackPathsOverride></MSBuildExtensionsPathFallbackPathsOverride>
+    <NuGetTasksAssembly>$(MSBuildSDKsPath)\..\NuGet.Build.Tasks.dll</NuGetTasksAssembly>
+    <!-- Keep MSBuild task lookup on the .NET SDK root, not Visual Studio -->
+    <MSBuildExtensionsPath>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath>
+    <MSBuildExtensionsPath32>$(MSBuildSDKsPath)\..</MSBuildExtensionsPath32>
+    <MSBuildExtensionsPathFallbackPaths></MSBuildExtensionsPathFallbackPaths>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoMarket.Domain\CryptoMarket.Domain.csproj" />
+    <ProjectReference Include="..\CryptoMarket.Application\CryptoMarket.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Polly" Version="8.2.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
